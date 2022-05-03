@@ -41,7 +41,7 @@ type ServerOption struct {
 	DAppPort      int
 	AuthPort      int
 	StaticBaseDir string
-	dRPCURL       *url.URL
+	SbitdRPCURL   *url.URL
 	DebugMode     bool
 }
 
@@ -331,7 +331,7 @@ func (s *Server) doRPCCallAuth(c echo.Context, jsonRPCReq *jsonRPCRequest) error
 }
 
 func (s *Server) doProxyRPCCall(c echo.Context, jsonRPCReq *jsonRPCRequest) error {
-	rpcURL := s.Options.dRPCURL
+	rpcURL := s.Options.SbitdRPCURL
 
 	rpcBodyBytes, err := json.Marshal(jsonRPCReq)
 	if err != nil {

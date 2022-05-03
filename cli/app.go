@@ -16,7 +16,7 @@ func Run() {
 	kingpin.MustParse(app.Parse(os.Args[1:]))
 }
 
-func getSBitRPCURL() *url.URL {
+func getRPCURL() *url.URL {
 	if *sbitRPC == "" {
 		log.Fatalln("Please set SBIT_RPC to sbitd's RPC URL")
 	}

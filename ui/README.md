@@ -1,5 +1,5 @@
 
-This hands-on tutorial will guide you through the process of developing a SBit DApp. By following along, you will:
+This hands-on tutorial will guide you through the process of developing a  DApp. By following along, you will:
 
 1. Run sbit's blockchain services in a docker container, in test mode.
 1. Generate initial coins for development.
@@ -560,7 +560,7 @@ We can access a contract by initializing a `Contract` object:
 
 ```js
 // SBIT_RPC is the RPC URL
-const rpc = new SBitRPC(SBIT_RPC)
+const rpc = new RPC(SBIT_RPC)
 
 // CONTRACTS is the JSON object in solar.development.json
 const counter = new Contract(rpc, CONTRACTS.counter)

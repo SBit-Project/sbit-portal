@@ -34,7 +34,7 @@ func init() {
 func testServer() *Server {
 	opts := ServerOption{
 		// Port:        9999,
-		SBitdRPCURL: testRPCURL,
+		dRPCURL: testRPCURL,
 	}
 
 	s := NewServer(opts)

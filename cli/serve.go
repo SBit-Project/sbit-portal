@@ -30,8 +30,8 @@ func init() {
 			AuthPort:      *authPort,
 			StaticBaseDir: staticDir,
 
-			SBitdRPCURL: getSBitRPCURL(),
-			DebugMode:   *devMode,
+			dRPCURL:   getRPCURL(),
+			DebugMode: *devMode,
 		}
 
 		s := portal.NewServer(opts)
